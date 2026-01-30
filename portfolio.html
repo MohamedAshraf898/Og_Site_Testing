@@ -23,19 +23,20 @@
 </head>
 <body class="ori-inner-page">
 
-<header id="ori-header" class="ori-header-section header-style-one">
+<!-- Start of header section
+	============================================= -->
+		<header id="ori-header" class="ori-header-section header-style-one">
 		<div class="ori-header-content-area">
 			<div class="ori-header-content d-flex align-items-center justify-content-between">
 				<div class="brand-logo">
-					<a href="index.html"><img src="assets/img/logo/logo1.webp
-						" alt="" width="100px" height="500px"></a>
+					<a href="#"><img src="assets/img/logo/logo1.webp" alt=""></a>
 				</div>
 				<div class="ori-main-navigation-area">
 					<nav class="ori-main-navigation clearfix ul-li">
-						<ul id="main-nav" class="nav navbar-nav clearfix">
+						<ul id="main-nav" class="nav navbar-nav clearfix" style="position: relative;right: 100px;">
 							
-							<li><a  href="index.html">Home</a></li>
-								<li><a  href="about.html">About</a></li>
+							<li><a target="_blank" href="index-1.html">Home</a></li>
+								<li><a target="_blank" href="about.html">About</a></li>
 								<li >
 									<a href="service.html">Services</a>
 								</li>
@@ -50,11 +51,43 @@
 				</div>
 				<div class="ori-header-sidebar-search d-flex align-items-center">
 					
-					<div class="ori-sidenav-btn navSidebar-button">
-					</div>
+					<div> <span></span></div>
 				</div>
 			</div>
-			
+			<div class="mobile_menu position-relative">
+				<div class="mobile_menu_button open_mobile_menu" style="padding-top: 18px;">
+					<i class="fal fa-bars"></i>
+				</div>
+				<div class="mobile_menu_wrap">
+					<div class="mobile_menu_overlay open_mobile_menu"></div>
+					<div class="mobile_menu_content">
+						<div class="mobile_menu_close open_mobile_menu">
+							<i class="fal fa-times"></i>
+						</div>
+						<div class="m-brand-logo">
+							<a  href="index.html"><img src="assets/img/logo/logo1.webp" alt=""></a>
+						</div>
+						<nav class="mobile-main-navigation  clearfix ul-li">
+							<ul id="m-main-nav" class="nav navbar-nav clearfix">
+								
+							<li><a  href="index-1.html">Home</a></li>
+								<li><a  href="about.html">About</a></li>
+								<li >
+									<a href="service.html">Services</a>
+								</li>
+								<li >
+									<a href="contact.html">Contact Us</a>
+								</li>
+								<li >
+									<a href="portfolio.html">portfolio</a>
+								</li>
+							</ul>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<!-- /Mobile-Menu -->
+			</div>
 		</div>
 	</header><!-- /header -->
 

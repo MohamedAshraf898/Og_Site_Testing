@@ -4,13 +4,11 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Portfolio</title>
-	<meta name="description" content="Og - Marketing Agency
-	">
+	<meta name="description" content="Og - Marketing Agency">
 	<meta name="keywords"
 		content="advertising, advertising agency, agency, agency theme, business, creative agency, digital, digital advertising, digital agency, digital marketing, digital marketing agency, digital theme, marketing, startup">
 	<meta name="author" content="Themexriver">
 	<link rel="shortcut icon" href="assets/img/logo/logo1.webp" type="image/x-icon">
-	<!-- Mobile Specific Meta -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -22,12 +20,48 @@
 	<link rel="stylesheet" href="assets/css/slick.css">
 	<link rel="stylesheet" href="assets/css/global.css">
 	<link rel="stylesheet" href="assets/css/style.css">
+
+	<style>
+		.lazy-iframe-wrapper {
+			position: relative;
+			width: 100%;
+			height: 300px;
+			background: #1a1a1a;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 4px;
+			overflow: hidden;
+		}
+
+		.lazy-iframe-wrapper::before {
+			content: "▶";
+			color: #555;
+			font-size: 32px;
+		}
+
+		.lazy-iframe-wrapper iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			display: none;
+			border: none;
+		}
+
+		.lazy-iframe-wrapper.loaded::before {
+			display: none;
+		}
+
+		.lazy-iframe-wrapper.loaded iframe {
+			display: block;
+		}
+	</style>
 </head>
 
 <body class="ori-inner-page">
 
-	<!-- Start of header section
-	============================================= -->
 	<header id="ori-header" class="ori-header-section header-style-one">
 		<div class="ori-header-content-area">
 			<div class="ori-header-content d-flex align-items-center justify-content-between">
@@ -37,24 +71,16 @@
 				<div class="ori-main-navigation-area">
 					<nav class="ori-main-navigation clearfix ul-li">
 						<ul id="main-nav" class="nav navbar-nav clearfix" style="position: relative;right: 100px;">
-
 							<li><a target="_blank" href="index.html">Home</a></li>
 							<li><a target="_blank" href="about.html">About</a></li>
-							<li>
-								<a href="service.html">Services</a>
-							</li>
-							<li>
-								<a href="#ori-footer">Contact Us</a>
-							</li>
-							<li>
-								<a href="portfolio.html">portfolio</a>
-							</li>
+							<li><a href="service.html">Services</a></li>
+							<li><a href="#ori-footer">Contact Us</a></li>
+							<li><a href="portfolio.html">portfolio</a></li>
 						</ul>
 					</nav>
 				</div>
 				<div class="ori-header-sidebar-search d-flex align-items-center">
-
-					<div> <span></span></div>
+					<div><span></span></div>
 				</div>
 			</div>
 			<div class="mobile_menu position-relative">
@@ -70,31 +96,21 @@
 						<div class="m-brand-logo">
 							<a href="index.html"><img src="assets/img/logo/logo1.webp" alt=""></a>
 						</div>
-						<nav class="mobile-main-navigation  clearfix ul-li">
+						<nav class="mobile-main-navigation clearfix ul-li">
 							<ul id="m-main-nav" class="nav navbar-nav clearfix">
-
 								<li><a href="index.html">Home</a></li>
 								<li><a href="about.html">About</a></li>
-								<li>
-									<a href="service.html">Services</a>
-								</li>
-								<li>
-									<a href="contact.html">Contact Us</a>
-								</li>
-								<li>
-									<a href="portfolio.html">portfolio</a>
-								</li>
-							</ul>
+								<li><a href="service.html">Services</a></li>
+								<li><a href="contact.html">Contact Us</a></li>
+								<li><a href="portfolio.html">portfolio</a></li>
 							</ul>
 						</nav>
 					</div>
 				</div>
-				<!-- /Mobile-Menu -->
 			</div>
 		</div>
-	</header><!-- /header -->
+	</header>
 
-	<!-- Search PopUp -->
 	<div class="search-popup">
 		<button class="close-search style-two"><span class="fal fa-times"></span></button>
 		<button class="close-search"><span class="fa fa-arrow-up"></span></button>
@@ -105,7 +121,7 @@
 			</div>
 		</form>
 	</div>
-	<!-- Sidebar sidebar Item -->
+
 	<div class="xs-sidebar-group info-group">
 		<div class="xs-overlay xs-bg-black">
 			<div class="row loader-area">
@@ -126,12 +142,9 @@
 		<div class="xs-sidebar-widget">
 			<div class="sidebar-widget-container">
 				<div class="widget-heading">
-					<a href="#" class="close-side-widget">
-						X
-					</a>
+					<a href="#" class="close-side-widget">X</a>
 				</div>
 				<div class="sidebar-textwidget">
-
 					<div class="sidebar-info-contents headline pera-content">
 						<div class="content-inner">
 							<div class="logo">
@@ -141,7 +154,7 @@
 								<h5>About Us</h5>
 								<p class="text">The argument in favor of using filler text goes something like this: If
 									you use real content in the Consulting Process, anytime you reach a review point
-									you’ll end up reviewing and negotiating the content itself and not the design.</p>
+									you'll end up reviewing and negotiating the content itself and not the design.</p>
 							</div>
 							<div class="gallery-box ul-li">
 								<h5>Gallery</h5>
@@ -181,11 +194,7 @@
 			</div>
 		</div>
 	</div>
-	<!-- End of header section
-	============================================= -->
 
-	<!-- Start of Breadcrumbs  section
-	============================================= -->
 	<section id="ori-breadcrumbs" class="ori-breadcrumbs-section position-relative"
 		data-background="assets/img/bg/bread-bg.png">
 		<div class="container">
@@ -208,90 +217,54 @@
 			<div class="line_area"></div>
 		</div>
 	</section>
-	<!-- End of Breadcrumbs section
-	============================================= -->
+
 	<section id="ori-sponsor-1" class="ori-sponsor-section-1 position-relative">
 		<div class="container">
 			<div class="ori-sponsor-title text-uppercase text-center">
-				<h3><i></i> <span>Trusted by</span> <i></i> </h3>
+				<h3><i></i> <span>Trusted by</span> <i></i></h3>
 			</div>
 			<div class="ori-sponsor-content">
 				<div class="ori-sponsor-slider">
 					<div class="ori-sponsor-item">
-						<div class="ori-sponsor-img">
-							<a>
-								<img src="assets/img/trustedby/Artboard-1.webp" alt="">
-							</a>
+						<div class="ori-sponsor-img"><a><img src="assets/img/trustedby/Artboard-1.webp" alt=""></a>
 						</div>
 					</div>
 					<div class="ori-sponsor-item">
-						<div class="ori-sponsor-img">
-							<a>
-								<img src="assets/img/trustedby/Artboard 2.webp" alt="">
-							</a>
+						<div class="ori-sponsor-img"><a><img src="assets/img/trustedby/Artboard 2.webp" alt=""></a>
 						</div>
 					</div>
 					<div class="ori-sponsor-item">
-						<div class="ori-sponsor-img">
-							<a>
-								<img src="assets/img/trustedby/Artboard 3.webp" alt="">
-							</a>
+						<div class="ori-sponsor-img"><a><img src="assets/img/trustedby/Artboard 3.webp" alt=""></a>
 						</div>
 					</div>
 					<div class="ori-sponsor-item">
-						<div class="ori-sponsor-img">
-							<a>
-								<img src="assets/img/trustedby/Artboard 4.webp" alt="">
-							</a>
+						<div class="ori-sponsor-img"><a><img src="assets/img/trustedby/Artboard 4.webp" alt=""></a>
 						</div>
 					</div>
 					<div class="ori-sponsor-item">
-						<div class="ori-sponsor-img">
-							<a>
-								<img src="/387896.png" style="width: 100px;" alt="">
-							</a>
+						<div class="ori-sponsor-img"><a><img src="/387896.png" style="width:100px;" alt=""></a></div>
+					</div>
+					<div class="ori-sponsor-item">
+						<div class="ori-sponsor-img"><a><img src="/images.png" style="width:100px;" alt=""></a></div>
+					</div>
+					<div class="ori-sponsor-item">
+						<div class="ori-sponsor-img"><a><img src="/apple-pay-2.png" style="width:100px;" alt=""></a>
 						</div>
 					</div>
 					<div class="ori-sponsor-item">
-						<div class="ori-sponsor-img">
-							<a>
-								<img src="/images.png" style="width: 100px;" alt="">
-							</a>
+						<div class="ori-sponsor-img"><a><img src="/images (1).png" style="width:100px;" alt=""></a>
 						</div>
 					</div>
 					<div class="ori-sponsor-item">
-						<div class="ori-sponsor-img">
-							<a>
-								<img src="/apple-pay-2.png" style="width: 100px;" alt="">
-							</a>
+						<div class="ori-sponsor-img"><a><img src="assets/img/trustedby/Artboard-6.webp" alt=""></a>
 						</div>
 					</div>
 					<div class="ori-sponsor-item">
-						<div class="ori-sponsor-img">
-							<a>
-								<img src="/images (1).png" style="width: 100px;" alt="">
-							</a>
+						<div class="ori-sponsor-img"><a><img src="assets/img/trustedby/Artboard-7.webp" alt=""></a>
 						</div>
 					</div>
 					<div class="ori-sponsor-item">
-						<div class="ori-sponsor-img">
-							<a>
-								<img src="assets/img/trustedby/Artboard-6.webp" alt="">
-							</a>
-						</div>
-					</div>
-					<div class="ori-sponsor-item">
-						<div class="ori-sponsor-img">
-							<a>
-								<img src="assets/img/trustedby/Artboard-7.webp" alt="">
-							</a>
-						</div>
-					</div>
-					<div class="ori-sponsor-item">
-						<div class="ori-sponsor-img">
-							<a>
-								<img src="assets/img/trustedby/Artboard 8.webp" alt="">
-							</a>
+						<div class="ori-sponsor-img"><a><img src="assets/img/trustedby/Artboard 8.webp" alt=""></a>
 						</div>
 					</div>
 				</div>
@@ -308,8 +281,7 @@
 			<div class="line_area"></div>
 		</div>
 	</section>
-	<!-- Start of Portfolio  section
-	============================================= -->
+
 	<section id="ori-portfolio-feed" class="ori-portfolio-feed-section position-relative">
 		<div class="container">
 			<div class="ori-portfolio-filter-btn ul-li text-center">
@@ -324,28 +296,13 @@
 				</ul>
 			</div>
 			<div class="ori-portfolio-feed-item-wrapper filtr-container row">
+
+				<!-- Category 1: Web Development -->
 				<div class="col-lg-4 col-sm-6 filtr-item" data-category="1" data-sort="Busy streets">
 					<div class="ori-portfolio-item position-relative">
 						<div class="portfolio-img">
 							<img src="assets/img/project/1 (3).webp" alt="">
 						</div>
-
-					</div>
-				</div>
-				<div class="col-lg-4 col-sm-6 filtr-item" data-category="4" data-sort="Busy streets">
-					<div class="ori-portfolio-item position-relative">
-						<div class="portfolio-img">
-							<img src="assets/img/project/results5.webp" alt="">
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-sm-6 filtr-item" data-category="2" data-sort="Busy streets">
-					<div class="ori-portfolio-item position-relative">
-						<div class="portfolio-img">
-							<img src="assets/img/project/5.webp" alt="">
-						</div>
-
 					</div>
 				</div>
 				<div class="col-lg-4 col-sm-6 filtr-item" data-category="1" data-sort="Busy streets">
@@ -353,7 +310,6 @@
 						<div class="portfolio-img">
 							<img src="assets/img/project/3 (1).webp" alt="">
 						</div>
-
 					</div>
 				</div>
 				<div class="col-lg-4 col-sm-6 filtr-item" data-category="1" data-sort="Busy streets">
@@ -361,16 +317,22 @@
 						<div class="portfolio-img">
 							<img src="assets/img/project/4.webp" alt="">
 						</div>
-
 					</div>
 				</div>
 
-				<div class="col-lg-4 col-sm-6 filtr-item" data-category=" 2" data-sort="Busy streets">
+				<!-- Category 2: Branding -->
+				<div class="col-lg-4 col-sm-6 filtr-item" data-category="2" data-sort="Busy streets">
+					<div class="ori-portfolio-item position-relative">
+						<div class="portfolio-img">
+							<img src="assets/img/project/5.webp" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-sm-6 filtr-item" data-category="2" data-sort="Busy streets">
 					<div class="ori-portfolio-item position-relative">
 						<div class="portfolio-img">
 							<img src="assets/img/project/6 (1).webp" alt="">
 						</div>
-
 					</div>
 				</div>
 				<div class="col-lg-4 col-sm-6 filtr-item" data-category="2" data-sort="Busy streets">
@@ -378,7 +340,6 @@
 						<div class="portfolio-img">
 							<img src="/Post4 copy.jpg" alt="">
 						</div>
-
 					</div>
 				</div>
 				<div class="col-lg-4 col-sm-6 filtr-item" data-category="2" data-sort="Busy streets">
@@ -389,22 +350,30 @@
 								<img src="/POST7 copy.jpg" alt="" style="width:100%;">
 							</a>
 						</div>
-
 					</div>
 				</div>
+
+				<!-- Category 3: Graphic Design -->
 				<div class="col-lg-4 col-sm-6 filtr-item" data-category="3" data-sort="Busy streets">
 					<div class="ori-portfolio-item position-relative">
 						<div class="portfolio-img">
 							<img src="assets/img/project/gr1.webp" alt="">
 						</div>
-
 					</div>
 				</div>
-
 				<div class="col-lg-4 col-sm-6 filtr-item" data-category="3" data-sort="Busy streets">
 					<div class="ori-portfolio-item position-relative">
 						<div class="portfolio-img">
 							<img src="assets/img/project/gr3.webp" alt="">
+						</div>
+					</div>
+				</div>
+
+				<!-- Category 4: Media Buying -->
+				<div class="col-lg-4 col-sm-6 filtr-item" data-category="4" data-sort="Busy streets">
+					<div class="ori-portfolio-item position-relative">
+						<div class="portfolio-img">
+							<img src="assets/img/project/results5.webp" alt="">
 						</div>
 					</div>
 				</div>
@@ -415,14 +384,6 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-4 col-sm-6 filtr-item" data-category="4" data-sort="Busy streets">
-					<div class="ori-portfolio-item position-relative">
-						<div class="portfolio-img">
-							<img src="assets/img/project/result 2.webp" alt="">
-						</div>
-					</div>
-				</div>
-
 				<div class="col-lg-4 col-sm-6 filtr-item" data-category="4" data-sort="Busy streets">
 					<div class="ori-portfolio-item position-relative">
 						<div class="portfolio-img">
@@ -444,6 +405,8 @@
 						</div>
 					</div>
 				</div>
+
+				<!-- Category 5: Photoshoot — static images first, then lazy iframes -->
 				<div class="col-lg-4 col-sm-6 filtr-item" data-category="5" data-sort="Busy streets">
 					<div class="ori-portfolio-item position-relative">
 						<div class="portfolio-img">
@@ -468,343 +431,369 @@
 				<div class="col-lg-4 col-sm-6 filtr-item" data-category="5" data-sort="Busy streets">
 					<div class="ori-portfolio-item position-relative">
 						<div class="portfolio-img">
-							<iframe src="https://drive.google.com/file/d/1zaFgtOBscCDYWyVcViD3VC2oJqpaLVTM/preview"
-								width="100%" height="300" allow="autoplay; fullscreen" allowfullscreen
-								style="position: relative; z-index: 10; display: block;">
-							</iframe>
+							<div class="lazy-iframe-wrapper">
+								<iframe
+									data-src="https://drive.google.com/file/d/1zaFgtOBscCDYWyVcViD3VC2oJqpaLVTM/preview"
+									width="100%" height="300" allow="autoplay; fullscreen" allowfullscreen></iframe>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-sm-6 filtr-item" data-category="5" data-sort="Busy streets">
 					<div class="ori-portfolio-item position-relative">
 						<div class="portfolio-img">
-							<iframe src="https://drive.google.com/file/d/162KJV8Ja17WbOjrdzAShuoHevXLWpe55/preview"
-								width="100%" height="300" allow="autoplay; fullscreen" allowfullscreen
-								style="position: relative; z-index: 10; display: block;">
-							</iframe>
+							<div class="lazy-iframe-wrapper">
+								<iframe
+									data-src="https://drive.google.com/file/d/162KJV8Ja17WbOjrdzAShuoHevXLWpe55/preview"
+									width="100%" height="300" allow="autoplay; fullscreen" allowfullscreen></iframe>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-sm-6 filtr-item" data-category="5" data-sort="Busy streets">
 					<div class="ori-portfolio-item position-relative">
 						<div class="portfolio-img">
-							<iframe src="https://drive.google.com/file/d/1_eAa1P4tDyRyOBPluH4sBjyCCrE8NsnN/preview"
-								width="100%" height="300" allow="autoplay; fullscreen" allowfullscreen
-								style="position: relative; z-index: 10; display: block;">
-							</iframe>
+							<div class="lazy-iframe-wrapper">
+								<iframe
+									data-src="https://drive.google.com/file/d/1_eAa1P4tDyRyOBPluH4sBjyCCrE8NsnN/preview"
+									width="100%" height="300" allow="autoplay; fullscreen" allowfullscreen></iframe>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-sm-6 filtr-item" data-category="5" data-sort="Busy streets">
 					<div class="ori-portfolio-item position-relative">
 						<div class="portfolio-img">
-							<iframe src="https://drive.google.com/file/d/14jj6cJ9GBbjg-98_GlN9AwSIU1FnRT-4/preview"
-								width="100%" height="300" allow="autoplay; fullscreen" allowfullscreen
-								style="position: relative; z-index: 10; display: block;">
-							</iframe>
+							<div class="lazy-iframe-wrapper">
+								<iframe
+									data-src="https://drive.google.com/file/d/14jj6cJ9GBbjg-98_GlN9AwSIU1FnRT-4/preview"
+									width="100%" height="300" allow="autoplay; fullscreen" allowfullscreen></iframe>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-sm-6 filtr-item" data-category="5" data-sort="Busy streets">
 					<div class="ori-portfolio-item position-relative">
 						<div class="portfolio-img">
-							<iframe data-src="https://drive.google.com/file/d/1RdorCPTUuCEL9gNuMl7a8-L-PGbP3ePX/preview"
-								width="100%" height="300" allow="autoplay; fullscreen" allowfullscreen
-								style="position: relative; z-index: 10; display: block;">
-							</iframe>
+							<div class="lazy-iframe-wrapper">
+								<iframe
+									data-src="https://drive.google.com/file/d/1RdorCPTUuCEL9gNuMl7a8-L-PGbP3ePX/preview"
+									width="100%" height="300" allow="autoplay; fullscreen" allowfullscreen></iframe>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-sm-6 filtr-item" data-category="5" data-sort="Busy streets">
 					<div class="ori-portfolio-item position-relative">
 						<div class="portfolio-img">
-							<iframe data-src="https://drive.google.com/file/d/1DNOcn9_Z0VQLgDL0cHEz6UuruxTtRwL6/preview"
-								width="100%" height="300" allow="autoplay; fullscreen" allowfullscreen
-								style="position: relative; z-index: 10; display: block;">
-							</iframe>
+							<div class="lazy-iframe-wrapper">
+								<iframe
+									data-src="https://drive.google.com/file/d/1DNOcn9_Z0VQLgDL0cHEz6UuruxTtRwL6/preview"
+									width="100%" height="300" allow="autoplay; fullscreen" allowfullscreen></iframe>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-sm-6 filtr-item" data-category="5" data-sort="Busy streets">
 					<div class="ori-portfolio-item position-relative">
 						<div class="portfolio-img">
-							<iframe data-src="https://drive.google.com/file/d/1VbBnkkqaPxAD4TswJpLd7vgy4Dfh5UKV/preview"
-								width="100%" height="300" allow="autoplay; fullscreen" allowfullscreen
-								style="position: relative; z-index: 10; display: block;">
-							</iframe>
+							<div class="lazy-iframe-wrapper">
+								<iframe
+									data-src="https://drive.google.com/file/d/1VbBnkkqaPxAD4TswJpLd7vgy4Dfh5UKV/preview"
+									width="100%" height="300" allow="autoplay; fullscreen" allowfullscreen></iframe>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-sm-6 filtr-item" data-category="5" data-sort="Busy streets">
 					<div class="ori-portfolio-item position-relative">
 						<div class="portfolio-img">
-							<iframe data-src="https://drive.google.com/file/d/1eBuJODx7cWyZe3m_b7mgVLp147QDBsjl/preview"
-								width="100%" height="300" allow="autoplay; fullscreen" allowfullscreen
-								style="position: relative; z-index: 10; display: block;">
-							</iframe>
+							<div class="lazy-iframe-wrapper">
+								<iframe
+									data-src="https://drive.google.com/file/d/1eBuJODx7cWyZe3m_b7mgVLp147QDBsjl/preview"
+									width="100%" height="300" allow="autoplay; fullscreen" allowfullscreen></iframe>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-sm-6 filtr-item" data-category="5" data-sort="Busy streets">
 					<div class="ori-portfolio-item position-relative">
 						<div class="portfolio-img">
-							<iframe data-src="https://drive.google.com/file/d/1JWPxarsMkYvuOgmB2rdhFiuXzaXAvaXE/preview"
-								width="100%" height="300" allow="autoplay; fullscreen" allowfullscreen
-								style="position: relative; z-index: 10; display: block;">
-							</iframe>
+							<div class="lazy-iframe-wrapper">
+								<iframe
+									data-src="https://drive.google.com/file/d/1JWPxarsMkYvuOgmB2rdhFiuXzaXAvaXE/preview"
+									width="100%" height="300" allow="autoplay; fullscreen" allowfullscreen></iframe>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-sm-6 filtr-item" data-category="5" data-sort="Busy streets">
 					<div class="ori-portfolio-item position-relative">
 						<div class="portfolio-img">
-							<iframe data-src="https://drive.google.com/file/d/1m5GOi0XnNKvnE1culTJe8esREfelBeIt/preview"
-								width="100%" height="300" allow="autoplay; fullscreen" allowfullscreen
-								style="position: relative; z-index: 10; display: block;">
-							</iframe>
+							<div class="lazy-iframe-wrapper">
+								<iframe
+									data-src="https://drive.google.com/file/d/1m5GOi0XnNKvnE1culTJe8esREfelBeIt/preview"
+									width="100%" height="300" allow="autoplay; fullscreen" allowfullscreen></iframe>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-sm-6 filtr-item" data-category="5" data-sort="Busy streets">
 					<div class="ori-portfolio-item position-relative">
 						<div class="portfolio-img">
-							<iframe data-src="https://drive.google.com/file/d/10gzZVR6stlrcNyWX3XkU3cydcmQ5tyGK/preview"
-								width="100%" height="300" allow="autoplay; fullscreen" allowfullscreen
-								style="position: relative; z-index: 10; display: block;">
-							</iframe>
+							<div class="lazy-iframe-wrapper">
+								<iframe
+									data-src="https://drive.google.com/file/d/10gzZVR6stlrcNyWX3XkU3cydcmQ5tyGK/preview"
+									width="100%" height="300" allow="autoplay; fullscreen" allowfullscreen></iframe>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-sm-6 filtr-item" data-category="5" data-sort="Busy streets">
 					<div class="ori-portfolio-item position-relative">
 						<div class="portfolio-img">
-							<iframe data-src="https://drive.google.com/file/d/1B9_nAgxqIZEfPJv2txZ6QChgxrTJp57J/preview"
-								width="100%" height="300" allow="autoplay; fullscreen" allowfullscreen
-								style="position: relative; z-index: 10; display: block;">
-							</iframe>
+							<div class="lazy-iframe-wrapper">
+								<iframe
+									data-src="https://drive.google.com/file/d/1B9_nAgxqIZEfPJv2txZ6QChgxrTJp57J/preview"
+									width="100%" height="300" allow="autoplay; fullscreen" allowfullscreen></iframe>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-sm-6 filtr-item" data-category="5" data-sort="Busy streets">
 					<div class="ori-portfolio-item position-relative">
 						<div class="portfolio-img">
-							<iframe data-src="https://drive.google.com/file/d/1Rw3pU3CPw62hic9xS9Fvewe_gyaJKkY_/preview"
-								width="100%" height="300" allow="autoplay; fullscreen" allowfullscreen
-								style="position: relative; z-index: 10; display: block;">
-							</iframe>
+							<div class="lazy-iframe-wrapper">
+								<iframe
+									data-src="https://drive.google.com/file/d/1Rw3pU3CPw62hic9xS9Fvewe_gyaJKkY_/preview"
+									width="100%" height="300" allow="autoplay; fullscreen" allowfullscreen></iframe>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-sm-6 filtr-item" data-category="5" data-sort="Busy streets">
 					<div class="ori-portfolio-item position-relative">
 						<div class="portfolio-img">
-							<iframe data-src="https://drive.google.com/file/d/1K9bTSsua_85NzUsjD8nxFyRchX0vKeZR/preview"
-								width="100%" height="300" allow="autoplay; fullscreen" allowfullscreen
-								style="position: relative; z-index: 10; display: block;">
-							</iframe>
+							<div class="lazy-iframe-wrapper">
+								<iframe
+									data-src="https://drive.google.com/file/d/1K9bTSsua_85NzUsjD8nxFyRchX0vKeZR/preview"
+									width="100%" height="300" allow="autoplay; fullscreen" allowfullscreen></iframe>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Category 6: Video Editing — all lazy iframes -->
+				<div class="col-lg-4 col-sm-6 filtr-item" data-category="6" data-sort="Busy streets">
+					<div class="ori-portfolio-item position-relative">
+						<div class="portfolio-img">
+							<div class="lazy-iframe-wrapper">
+								<iframe
+									data-src="https://drive.google.com/file/d/12NExSQaFWFcOJFNkINYtfcN2OwntERt_/preview"
+									width="100%" height="300" allow="autoplay; fullscreen" allowfullscreen></iframe>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-sm-6 filtr-item" data-category="6" data-sort="Busy streets">
 					<div class="ori-portfolio-item position-relative">
 						<div class="portfolio-img">
-							<iframe data-src="https://drive.google.com/file/d/12NExSQaFWFcOJFNkINYtfcN2OwntERt_/preview"
-								width="100%" height="300" allow="autoplay; fullscreen" allowfullscreen
-								style="position: relative; z-index: 10; display: block;">
-							</iframe>
+							<div class="lazy-iframe-wrapper">
+								<iframe
+									data-src="https://drive.google.com/file/d/1cpwRShWe7I7taTCBrBqXxWMsv6T4d-sL/preview"
+									width="100%" height="300" allow="autoplay; fullscreen" allowfullscreen></iframe>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-sm-6 filtr-item" data-category="6" data-sort="Busy streets">
 					<div class="ori-portfolio-item position-relative">
 						<div class="portfolio-img">
-							<iframe data-src="https://drive.google.com/file/d/1cpwRShWe7I7taTCBrBqXxWMsv6T4d-sL/preview"
-								width="100%" height="300" allow="autoplay; fullscreen" allowfullscreen
-								style="position: relative; z-index: 10; display: block;">
-							</iframe>
+							<div class="lazy-iframe-wrapper">
+								<iframe
+									data-src="https://drive.google.com/file/d/1qXhIgxrra02gKWfw4AkDqmUQFt1V7MJE/preview"
+									width="100%" height="300" allow="autoplay; fullscreen" allowfullscreen></iframe>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-sm-6 filtr-item" data-category="6" data-sort="Busy streets">
 					<div class="ori-portfolio-item position-relative">
 						<div class="portfolio-img">
-							<iframe data-src="https://drive.google.com/file/d/1qXhIgxrra02gKWfw4AkDqmUQFt1V7MJE/preview"
-								width="100%" height="300" allow="autoplay; fullscreen" allowfullscreen
-								style="position: relative; z-index: 10; display: block;">
-							</iframe>
+							<div class="lazy-iframe-wrapper">
+								<iframe
+									data-src="https://drive.google.com/file/d/1W0-W3tW6tHMgz8YqBPxgdrckMkxhKHPM/preview"
+									width="100%" height="300" allow="autoplay; fullscreen" allowfullscreen></iframe>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-sm-6 filtr-item" data-category="6" data-sort="Busy streets">
 					<div class="ori-portfolio-item position-relative">
 						<div class="portfolio-img">
-							<iframe data-src="https://drive.google.com/file/d/1W0-W3tW6tHMgz8YqBPxgdrckMkxhKHPM/preview"
-								width="100%" height="300" allow="autoplay; fullscreen" allowfullscreen
-								style="position: relative; z-index: 10; display: block;">
-							</iframe>
+							<div class="lazy-iframe-wrapper">
+								<iframe
+									data-src="https://drive.google.com/file/d/1qTx3wMx74H6FaDpVuZVKPSP43qNeomQL/preview"
+									width="100%" height="300" allow="autoplay; fullscreen" allowfullscreen></iframe>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-sm-6 filtr-item" data-category="6" data-sort="Busy streets">
 					<div class="ori-portfolio-item position-relative">
 						<div class="portfolio-img">
-							<iframe data-src="https://drive.google.com/file/d/1qTx3wMx74H6FaDpVuZVKPSP43qNeomQL/preview"
-								width="100%" height="300" allow="autoplay; fullscreen" allowfullscreen
-								style="position: relative; z-index: 10; display: block;">
-							</iframe>
+							<div class="lazy-iframe-wrapper">
+								<iframe
+									data-src="https://drive.google.com/file/d/1xA_THd5yKDvlLx3vMPxCbTdFGSpjMo2i/preview"
+									width="100%" height="300" allow="autoplay; fullscreen" allowfullscreen></iframe>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-sm-6 filtr-item" data-category="6" data-sort="Busy streets">
 					<div class="ori-portfolio-item position-relative">
 						<div class="portfolio-img">
-							<iframe data-src="https://drive.google.com/file/d/1xA_THd5yKDvlLx3vMPxCbTdFGSpjMo2i/preview"
-								width="100%" height="300" allow="autoplay; fullscreen" allowfullscreen
-								style="position: relative; z-index: 10; display: block;">
-							</iframe>
+							<div class="lazy-iframe-wrapper">
+								<iframe
+									data-src="https://drive.google.com/file/d/1uslGRKGRY5YSkrxI1dUHXkE2Im16luYM/preview"
+									width="100%" height="300" allow="autoplay; fullscreen" allowfullscreen></iframe>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-sm-6 filtr-item" data-category="6" data-sort="Busy streets">
 					<div class="ori-portfolio-item position-relative">
 						<div class="portfolio-img">
-							<iframe data-src="https://drive.google.com/file/d/1uslGRKGRY5YSkrxI1dUHXkE2Im16luYM/preview"
-								width="100%" height="300" allow="autoplay; fullscreen" allowfullscreen
-								style="position: relative; z-index: 10; display: block;">
-							</iframe>
+							<div class="lazy-iframe-wrapper">
+								<iframe
+									data-src="https://drive.google.com/file/d/162KJV8Ja17WbOjrdzAShuoHevXLWpe55/preview"
+									width="100%" height="300" allow="autoplay; fullscreen" allowfullscreen></iframe>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-sm-6 filtr-item" data-category="6" data-sort="Busy streets">
 					<div class="ori-portfolio-item position-relative">
 						<div class="portfolio-img">
-							<iframe data-src="https://drive.google.com/file/d/1uslGRKGRY5YSkrxI1dUHXkE2Im16luYM/preview"
-								width="100%" height="300" allow="autoplay; fullscreen" allowfullscreen
-								style="position: relative; z-index: 10; display: block;">
-							</iframe>
+							<div class="lazy-iframe-wrapper">
+								<iframe
+									data-src="https://drive.google.com/file/d/1CsCxHvKUZLWCLCAyQUHOVU6ZnJHNfuFx/preview"
+									width="100%" height="300" allow="autoplay; fullscreen" allowfullscreen></iframe>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-sm-6 filtr-item" data-category="6" data-sort="Busy streets">
 					<div class="ori-portfolio-item position-relative">
 						<div class="portfolio-img">
-							<iframe data-src="https://drive.google.com/file/d/162KJV8Ja17WbOjrdzAShuoHevXLWpe55/preview"
-								width="100%" height="300" allow="autoplay; fullscreen" allowfullscreen
-								style="position: relative; z-index: 10; display: block;">
-							</iframe>
+							<div class="lazy-iframe-wrapper">
+								<iframe
+									data-src="https://drive.google.com/file/d/1282Ou0dxg6eZnnq7-nXbS06PSmPS_2Lm/preview"
+									width="100%" height="300" allow="autoplay; fullscreen" allowfullscreen></iframe>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-sm-6 filtr-item" data-category="6" data-sort="Busy streets">
 					<div class="ori-portfolio-item position-relative">
 						<div class="portfolio-img">
-							<iframe data-src="https://drive.google.com/file/d/1CsCxHvKUZLWCLCAyQUHOVU6ZnJHNfuFx/preview"
-								width="100%" height="300" allow="autoplay; fullscreen" allowfullscreen
-								style="position: relative; z-index: 10; display: block;">
-							</iframe>
+							<div class="lazy-iframe-wrapper">
+								<iframe
+									data-src="https://drive.google.com/file/d/1LWCQ6HgRJOrCqNZnLfMUSzMqVoAU8c32/preview"
+									width="100%" height="300" allow="autoplay; fullscreen" allowfullscreen></iframe>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-sm-6 filtr-item" data-category="6" data-sort="Busy streets">
 					<div class="ori-portfolio-item position-relative">
 						<div class="portfolio-img">
-							<iframe data-src="https://drive.google.com/file/d/1282Ou0dxg6eZnnq7-nXbS06PSmPS_2Lm/preview"
-								width="100%" height="300" allow="autoplay; fullscreen" allowfullscreen
-								style="position: relative; z-index: 10; display: block;">
-							</iframe>
+							<div class="lazy-iframe-wrapper">
+								<iframe
+									data-src="https://drive.google.com/file/d/1RBwT-XEJp3GlrGfgk-C9yMSePxZf7coO/preview"
+									width="100%" height="300" allow="autoplay; fullscreen" allowfullscreen></iframe>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-sm-6 filtr-item" data-category="6" data-sort="Busy streets">
 					<div class="ori-portfolio-item position-relative">
 						<div class="portfolio-img">
-							<iframe data-src="https://drive.google.com/file/d/1LWCQ6HgRJOrCqNZnLfMUSzMqVoAU8c32/preview"
-								width="100%" height="300" allow="autoplay; fullscreen" allowfullscreen
-								style="position: relative; z-index: 10; display: block;">
-							</iframe>
+							<div class="lazy-iframe-wrapper">
+								<iframe
+									data-src="https://drive.google.com/file/d/135RCgOvwp9GgS_oD3JA1NDr1ajsXoQZY/preview"
+									width="100%" height="300" allow="autoplay; fullscreen" allowfullscreen></iframe>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-sm-6 filtr-item" data-category="6" data-sort="Busy streets">
 					<div class="ori-portfolio-item position-relative">
 						<div class="portfolio-img">
-							<iframe data-src="https://drive.google.com/file/d/1RBwT-XEJp3GlrGfgk-C9yMSePxZf7coO/preview"
-								width="100%" height="300" allow="autoplay; fullscreen" allowfullscreen
-								style="position: relative; z-index: 10; display: block;">
-							</iframe>
+							<div class="lazy-iframe-wrapper">
+								<iframe
+									data-src="https://drive.google.com/file/d/18K7BpBmX6JFBsyFnq4I9tdTWjWN1rQvP/preview"
+									width="100%" height="300" allow="autoplay; fullscreen" allowfullscreen></iframe>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-sm-6 filtr-item" data-category="6" data-sort="Busy streets">
 					<div class="ori-portfolio-item position-relative">
 						<div class="portfolio-img">
-							<iframe data-src="https://drive.google.com/file/d/135RCgOvwp9GgS_oD3JA1NDr1ajsXoQZY/preview"
-								width="100%" height="300" allow="autoplay; fullscreen" allowfullscreen
-								style="position: relative; z-index: 10; display: block;">
-							</iframe>
+							<div class="lazy-iframe-wrapper">
+								<iframe
+									data-src="https://drive.google.com/file/d/1EyRHmdm1I6K3j4kIRdflenRYvf4fTH_v/preview"
+									width="100%" height="300" allow="autoplay; fullscreen" allowfullscreen></iframe>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-sm-6 filtr-item" data-category="6" data-sort="Busy streets">
 					<div class="ori-portfolio-item position-relative">
 						<div class="portfolio-img">
-							<iframe data-src="https://drive.google.com/file/d/18K7BpBmX6JFBsyFnq4I9tdTWjWN1rQvP/preview"
-								width="100%" height="300" allow="autoplay; fullscreen" allowfullscreen
-								style="position: relative; z-index: 10; display: block;">
-							</iframe>
+							<div class="lazy-iframe-wrapper">
+								<iframe
+									data-src="https://drive.google.com/file/d/18Q2r-T-5PVEwACl6P8vMg5KZeNpxQDAy/preview"
+									width="100%" height="300" allow="autoplay; fullscreen" allowfullscreen></iframe>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-sm-6 filtr-item" data-category="6" data-sort="Busy streets">
 					<div class="ori-portfolio-item position-relative">
 						<div class="portfolio-img">
-							<iframe data-src="https://drive.google.com/file/d/1EyRHmdm1I6K3j4kIRdflenRYvf4fTH_v/preview"
-								width="100%" height="300" allow="autoplay; fullscreen" allowfullscreen
-								style="position: relative; z-index: 10; display: block;">
-							</iframe>
+							<div class="lazy-iframe-wrapper">
+								<iframe
+									data-src="https://drive.google.com/file/d/19bQgJDoX-SBV2U4EdlZ2otqqXPm6aGRv/preview"
+									width="100%" height="300" allow="autoplay; fullscreen" allowfullscreen></iframe>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-sm-6 filtr-item" data-category="6" data-sort="Busy streets">
 					<div class="ori-portfolio-item position-relative">
 						<div class="portfolio-img">
-							<iframe data-src="https://drive.google.com/file/d/18Q2r-T-5PVEwACl6P8vMg5KZeNpxQDAy/preview"
-								width="100%" height="300" allow="autoplay; fullscreen" allowfullscreen
-								style="position: relative; z-index: 10; display: block;">
-							</iframe>
+							<div class="lazy-iframe-wrapper">
+								<iframe
+									data-src="https://drive.google.com/file/d/1bvaodO8qM1pxGxnCVTuaw4IYezcqyJYq/preview"
+									width="100%" height="300" allow="autoplay; fullscreen" allowfullscreen></iframe>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-sm-6 filtr-item" data-category="6" data-sort="Busy streets">
 					<div class="ori-portfolio-item position-relative">
 						<div class="portfolio-img">
-							<iframe data-src="https://drive.google.com/file/d/19bQgJDoX-SBV2U4EdlZ2otqqXPm6aGRv/preview"
-								width="100%" height="300" allow="autoplay; fullscreen" allowfullscreen
-								style="position: relative; z-index: 10; display: block;">
-							</iframe>
+							<div class="lazy-iframe-wrapper">
+								<iframe
+									data-src="https://drive.google.com/file/d/1LI-mWEEQ6ICYG5xYBYsN1RWVdvBqYapj/preview"
+									width="100%" height="300" allow="autoplay; fullscreen" allowfullscreen></iframe>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-4 col-sm-6 filtr-item" data-category="6" data-sort="Busy streets">
-					<div class="ori-portfolio-item position-relative">
-						<div class="portfolio-img">
-							<iframe data-src="https://drive.google.com/file/d/1bvaodO8qM1pxGxnCVTuaw4IYezcqyJYq/preview"
-								width="100%" height="300" allow="autoplay; fullscreen" allowfullscreen
-								style="position: relative; z-index: 10; display: block;">
-							</iframe>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-sm-6 filtr-item" data-category="6" data-sort="Busy streets">
-					<div class="ori-portfolio-item position-relative">
-						<div class="portfolio-img">
-							<iframe data-src="https://drive.google.com/file/d/1LI-mWEEQ6ICYG5xYBYsN1RWVdvBqYapj/preview"
-								width="100%" height="300" allow="autoplay; fullscreen" allowfullscreen
-								style="position: relative; z-index: 10; display: block;">
-							</iframe>
-						</div>
-					</div>
-				</div>
+
 			</div>
 		</div>
 		<div class="line_animation">
@@ -818,11 +807,7 @@
 			<div class="line_area"></div>
 		</div>
 	</section>
-	<!-- End of Portfolio  section
-	============================================= -->
 
-	<!-- Start of Footer section
-	============================================= -->
 	<footer id="ori-footer" class="ori-footer-section footer-style-one">
 		<div class="container">
 			<div class="ori-footer-title text-center text-uppercase">
@@ -830,38 +815,21 @@
 				<br><br>
 				<div class="ori-contact-form-text-info pera-content">
 					<div class="calendly-inline-widget" data-url="https://calendly.com/ogformedia"
-						style="min-width:320px;height:200px;;  "></div>
+						style="min-width:320px;height:200px;"></div>
 					<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
 				</div>
-
 			</div>
 			<div class="ori-footer-widget-wrapper">
 				<div class="row">
 					<div class="col-lg-3 col-md-6">
 						<div class="ori-footer-widget">
 							<div class="logo-widget">
-								<a href="#"><img src="assets/img/logo/logo1.webp
-									" alt=""></a>
+								<a href="#"><img src="assets/img/logo/logo1.webp" alt=""></a>
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-3 col-md-6">
-						<div class="ori-footer-widget">
-							<div class="menu-location-widget ul-li-block">
-
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-6">
-						<div class="ori-footer-widget">
-							<div class="newslatter-widget ul-li-block">
-								<h2 class="widget-title text-uppercase"></h2>
-								<div class="newslatter-form">
-
-								</div>
-							</div>
-						</div>
-					</div>
+					<div class="col-lg-3 col-md-6"></div>
+					<div class="col-lg-3 col-md-6"></div>
 					<div class="col-lg-3 col-md-6">
 						<div class="ori-footer-widget">
 							<div class="contact-widget ul-li-block">
@@ -870,18 +838,14 @@
 									<span>United Arab Emirates</span>
 									<a href="https://wa.me/971545313135">(+971) 54 531 3135</a>
 									<a href="mailto:team@ogoperation.com">team@ogoperation.com</a>
-
 								</div>
 							</div>
 						</div>
 					</div>
-
 				</div>
 			</div>
 			<div class="ori-footer-copyright d-flex justify-content-between">
-				<div class="ori-copyright-text">
-					© 2025 All Right Recived - Og
-				</div>
+				<div class="ori-copyright-text">© 2025 All Right Recived - Og</div>
 				<div class="ori-copyright-social">
 					<a href="https://www.tiktok.com/@ogoperation?_r=1&_t=ZS-93TouIfqoQz"><i
 							class="fab fa-tiktok"></i></a>
@@ -891,60 +855,24 @@
 			</div>
 		</div>
 	</footer>
-	<!-- End of Footer section
-	============================================= -->
-	<!-- Paste this ONCE anywhere before your closing </body> tag -->
-	<style>
-		.lazy-iframe-wrapper {
-			position: relative;
-			width: 100%;
-			height: 300px;
-			background: #f0f0f0;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-		}
 
-		.lazy-iframe-wrapper::before {
-			content: "Loading...";
-			color: #999;
-			font-size: 14px;
-		}
-
-		.lazy-iframe-wrapper iframe {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			display: none;
-		}
-
-		.lazy-iframe-wrapper.loaded::before {
-			display: none;
-		}
-
-		.lazy-iframe-wrapper.loaded iframe {
-			display: block;
-		}
-	</style>
-
+	<!-- Lazy Load Script -->
 	<script>
 		document.addEventListener("DOMContentLoaded", function () {
-			const observer = new IntersectionObserver(function (entries) {
+			var observer = new IntersectionObserver(function (entries) {
 				entries.forEach(function (entry) {
 					if (entry.isIntersecting) {
-						const wrapper = entry.target;
-						const iframe = wrapper.querySelector("iframe[data-src]");
+						var wrapper = entry.target;
+						var iframe = wrapper.querySelector("iframe[data-src]");
 						if (iframe) {
-							iframe.src = iframe.dataset.src;
+							iframe.src = iframe.getAttribute("data-src");
 							iframe.removeAttribute("data-src");
 							wrapper.classList.add("loaded");
 						}
 						observer.unobserve(wrapper);
 					}
 				});
-			}, { rootMargin: "200px" });
+			}, { rootMargin: "300px" });
 
 			document.querySelectorAll(".lazy-iframe-wrapper").forEach(function (el) {
 				observer.observe(el);
@@ -952,7 +880,6 @@
 		});
 	</script>
 
-	<!-- For Js Library -->
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/jquery-ui.min.js"></script>
 	<script src="assets/js/bootstrap.min.js"></script>

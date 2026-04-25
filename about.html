@@ -42,7 +42,7 @@
 								<a href="service.html">Services</a>
 							</li>
 							<li>
-								<a href="#ori-footer">Contact Us</a>
+								<a a style="cursor: pointer;" onclick="openModal()">Contact Us</a>
 							</li>
 							<li>
 								<a href="portfolio.html">portfolio</a>
@@ -386,11 +386,10 @@
 							</a>
 						</div>
 					</div>
-
 					<div class="ori-sponsor-item">
 						<div class="ori-sponsor-img">
 							<a>
-								<img src="assets/img/trustedby/Artboard-6.webp" alt="">
+								<img src="/nomod-logo.e8d26d11.webp" style="width: 100px;" alt="">
 							</a>
 						</div>
 					</div>
@@ -410,6 +409,7 @@
 					</div>
 				</div>
 			</div>
+
 		</div>
 		<div class="line_animation">
 			<div class="line_area"></div>
@@ -427,9 +427,143 @@
 
 	<!-- Start of Footer section
 	============================================= -->
+	<div id="contactModal"
+		style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); z-index:9999;">
+
+		<div
+			style="background:#fff; width:90%; max-width:500px; margin:80px auto; padding:25px; border-radius:10px; position:relative;">
+
+			<span onclick="closeModal()"
+				style="position:absolute; right:15px; top:10px; cursor:pointer; font-size:22px;">×</span>
+
+			<h3 style="margin-bottom:15px;">Contact Us</h3>
+
+			<!-- FORM HERE -->
+			<form id="contactForm" action="https://formspree.io/f/xjgjjenp" method="POST"
+				style="display:flex; flex-direction:column; gap:10px;">
+
+				<!-- Full Name -->
+				<input type="text" name="full_name" placeholder="Full Name" required
+					style="padding:12px; border:1px solid #ccc; border-radius:6px;">
+
+				<!-- Mobile Number (UAE fixed) -->
+				<div style="display:flex; gap:5px;">
+
+					<div style="display:flex; gap:5px;">
+
+						<!-- Country Code Dropdown -->
+						<select name="country_code"
+							style="padding:12px;color: #000;width: 80px;font-size: 12px; font-weight: 600; border:1px solid #ccc; border-radius:6px;">
+
+							<option value="+971" selected>🇦🇪 +971</option>
+							<option value="+966">🇸🇦 +966 </option>
+							<option value="+965">🇰🇼 +965 </option>
+							<option value="+973">🇧🇭 +973 </option>
+							<option value="+974">🇶🇦 +974</option>
+							<option value="+968">🇴🇲 +968</option>
+
+						</select>
+
+						<!-- Phone Number -->
+						<input type="tel" name="phone" placeholder="Mobile Number" required
+							style="flex:1; padding:12px; border:1px solid #ccc; border-radius:6px;">
+
+					</div>
+				</div>
+
+				<!-- Email -->
+				<input type="email" name="email" placeholder="Email Address" required
+					style="padding:12px; border:1px solid #ccc; border-radius:6px;">
+
+				<p id="successMessage" style="display:none; color:green; font-weight:bold;">
+					Message sent successfully ✅
+				</p>
+				<!-- Hidden full phone (optional but useful) -->
+				<input type="hidden" name="full_phone" id="fullPhone">
+				<button type="submit"
+					style="padding:12px; background:black; color:white; border:none; border-radius:6px; cursor:pointer;">
+					Send Message
+				</button>
+
+			</form>
+
+		</div>
+	</div>
+	<script>
+		function openModal() {
+			document.getElementById("contactModal").style.display = "block";
+		}
+
+		function closeModal() {
+			document.getElementById("contactModal").style.display = "none";
+		}
+
+	</script>
+	<script>
+		const form = document.getElementById("contactForm");
+		const successMsg = document.getElementById("successMessage");
+
+		form.addEventListener("submit", async function (e) {
+			e.preventDefault();
+
+			const data = new FormData(form);
+
+			try {
+				const response = await fetch(form.action, {
+					method: "POST",
+					body: data,
+					headers: {
+						'Accept': 'application/json'
+					}
+				});
+
+				if (response.ok) {
+					successMsg.style.display = "block";
+					form.reset();
+
+					// ⬇️ close modal after 1.5s
+					setTimeout(() => {
+						closeModal();
+						successMsg.style.display = "none"; // reset for next open
+					}, 1500);
+
+				} else {
+					alert("Something went wrong ❌");
+				}
+
+			} catch (error) {
+				alert("Error sending message ❌");
+			}
+		});
+	</script>
+	<style>
+		.close-btn {
+			position: absolute;
+			top: 12px;
+			right: 15px;
+			font-size: 26px;
+			font-weight: bold;
+			color: #333;
+			cursor: pointer;
+			transition: 0.3s;
+		}
+
+		.close-btn:hover {
+			color: red;
+			transform: scale(1.2);
+		}
+	</style>
+	<script>
+		window.onclick = function (event) {
+			let modal = document.getElementById("contactModal");
+			if (event.target === modal) {
+				modal.style.display = "none";
+			}
+		}
+	</script>
 	<footer id="ori-footer" class="ori-footer-section footer-style-one">
 		<div class="container">
-			<div class="ori-footer-title text-center text-uppercase">
+			<div class="ori-footer-title text-center text-uppercase" a style="cursor: pointer;" onclick="openModal()">
 				<h2>Get In <span>Touch</span> <i class="fas fa-arrow-right"></i></h2>
 
 
